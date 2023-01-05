@@ -13,7 +13,7 @@ Before proceeding, let's discuss how `scala-cli` works in a script without the `
 Here is a simple `hello.sc` script with a `shebang` header:
 
 ```scala title=hello.sc
-#!/usr/bin/env scala-cli -S 3
+#!/usr/bin/env -S scala-cli --scala 3
 
 println(args.size)
 println(args.headOption)
@@ -83,7 +83,7 @@ World: not found
 If we modify our script slightly and use the `shebang` sub-command in the header, we will get the following:
 
 ```scala title=hello.sc
-#!/usr/bin/env scala-cli shebang -S 3
+#!/usr/bin/env -S scala-cli shebang --scala 3
 
 println(args.size)
 println(args.headOption)
