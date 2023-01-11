@@ -172,6 +172,8 @@ object Runner {
       scratchDirOpt
     )
 
+    System.err.println(command)
+    System.err.println(cwd)
     if (allowExecve)
       maybeExec("java", command, logger, cwd = cwd, extraEnv = extraEnv)
     else
